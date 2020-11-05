@@ -8,7 +8,9 @@ import java.util.stream.Stream;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.cts.flight.dao.BookingRecordDao;
 import com.cts.flight.dao.FlightDao;
+import com.cts.flight.entity.BookingRecord;
 import com.cts.flight.entity.Flight;
 import com.cts.flight.entity.Inventory;
 
@@ -17,6 +19,8 @@ public class SearchServiceImpl implements SearchService {
 
 	@Autowired
 	private FlightDao flightDao;
+	@Autowired
+	private BookingRecordDao bookingRecordDao;
 
 	@Override
 	public List<Flight> searchFlights(SearchQuery searchQuery) {
@@ -44,6 +48,9 @@ public class SearchServiceImpl implements SearchService {
 		}
 
 	}
+	
+	
+	
 
 	@Override
 	public Flight findByFlightNumberAndDlightDate(String flightNumber, LocalDate flightDate) {

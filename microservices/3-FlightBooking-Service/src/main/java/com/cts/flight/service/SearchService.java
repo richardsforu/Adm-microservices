@@ -14,5 +14,6 @@ public interface SearchService {
 	Flight findByFlightNumberAndDlightDate(String flightNumber, LocalDate flightDate);
 
 	Flight findByFlightId(int id);
+	
 
 }

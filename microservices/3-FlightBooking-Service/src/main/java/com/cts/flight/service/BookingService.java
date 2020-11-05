@@ -8,5 +8,6 @@ public interface BookingService {
 	Passenger bookFlight(Passenger passenger, long id, int numberofPassengers);
 
 	BookingRecord getBookingInfo(long bookingId);
+	public void updateStatus(String status,long bookingId);
 
 }
